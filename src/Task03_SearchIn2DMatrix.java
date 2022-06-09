@@ -27,14 +27,12 @@ public class Task03_SearchIn2DMatrix {
 	}
 
 	private static boolean searchMatrix(int[][] source, int target) {
-		int found;
+		int found=-1;
 		int targetRow = findRow(source, target);
-		if (targetRow == -1) {
-			found = -1;
-		} else {
+		if (targetRow != -1) {
 			found = Arrays.binarySearch(source[targetRow], target);
 		}
-		 System.out.println("return " + (found >= 0));
+		System.out.println("return " + (found >= 0));
 		return found >= 0;
 	}
 
@@ -68,5 +66,18 @@ public class Task03_SearchIn2DMatrix {
 			}
 			return answer;
 		}
+	}
+	
+	
+	public boolean searchMatrix2(int[][] matrix, int target) {
+		//Answer from leetcode
+		int n = matrix[0].length, start = 0, end = matrix.length*n-1, mid;
+		while(start<=end) {
+			mid = (start + end)/2;
+			if(matrix[mid/n][mid%n]==target) return true;
+			if(target > matrix[mid/n][mid%n]) start = mid + 1;
+			else end = mid - 1;
+		}
+		return false;
 	}
 }
