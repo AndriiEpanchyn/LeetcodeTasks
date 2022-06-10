@@ -5,6 +5,7 @@ public class Main {
 		//Task01_FindFirstAndLAstElement.run();
 		//Task02_FindElementInRotetedSortedArray.run();
 		//Task03_SearchIn2DMatrix.run();
-		Task04_FindMinInRotatedSortedArray.run();
+		//Task04_FindMinInRotatedSortedArray.run();
+		Task05_FindPeakIndex.run();
 	}
 }
