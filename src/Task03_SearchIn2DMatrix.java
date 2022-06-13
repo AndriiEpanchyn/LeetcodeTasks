@@ -23,7 +23,7 @@ public class Task03_SearchIn2DMatrix {
 	private static int target1 = 5;
 
 	public static void run() {
-		boolean b1 = searchMatrix(testMatrix1, target1);
+		searchMatrix(testMatrix1, target1);
 	}
 
 	private static boolean searchMatrix(int[][] source, int target) {

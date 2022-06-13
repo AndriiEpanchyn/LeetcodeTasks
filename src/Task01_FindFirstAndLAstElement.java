@@ -15,7 +15,7 @@ public class Task01_FindFirstAndLAstElement {
 
 	public static void run() {
 		int[] nums1 = new int[] { 5, 7, 7, 8, 8, 10 };
-		int[] answer = searchRange(nums1, 8);
+		searchRange(nums1, 8);
 	}
 
 	public static int[] searchRange(int[] nums, int target) {

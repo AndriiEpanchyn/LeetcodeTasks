@@ -2,16 +2,12 @@ import java.util.Arrays;
 
 /**
  * @TaskName Find any peak in array
- * @TaskDetails Suppose an array of length n sorted in ascending order is
- *              rotated between 1 and n times. For example, the array nums =
- *              [0,1,2,4,5,6,7] might become: [4,5,6,7,0,1,2] if it was rotated
- *              4 times. [0,1,2,4,5,6,7] if it was rotated 7 times. Notice that
- *              rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results
- *              in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]]. Given the
- *              sorted rotated array nums of unique elements, return the minimum
- *              element of this array. You must write an algorithm that runs in
- *              O(log n) time.
- * @Source https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+ * @TaskDetails A peak element is an element that is strictly greater than its neighbors.
+ * Given an integer array nums, find a peak element, and return its index. 
+ * If the array contains multiple peaks, return the index to any of the peaks.
+ * You may imagine that nums[-1] = nums[n] = -∞.
+ * You must write an algorithm that runs in O(log n) time.
+ * @Source https://leetcode.com/problems/find-peak-element/
  */
 public class Task05_FindPeakIndex {
 	public static void run() {
