@@ -7,6 +7,7 @@ public class Main {
 		//Task03_SearchIn2DMatrix.run();
 		//Task04_FindMinInRotatedSortedArray.run();
 		//Task05_FindPeakIndex.run();
-		Task06_RemoveDuplicatesInList.run();
+		//Task06_RemoveDuplicatesInList.run();
+		Task07_3Sum.run();
 	}
 }

@@ -72,6 +72,29 @@ public class Task06_RemoveDuplicatesInList {
 		return answer;
 	}
 
+	public ListNode deleteDuplicatesLeetCode(ListNode head) {
+    //Doesn't create new structure from begin, it just uses the same structure and reinstrall pointers on correct Node
+		
+		if(head==null) return null;
+        ListNode FakeHead=new ListNode(0);
+        FakeHead.next=head;
+        ListNode pre=FakeHead;
+        ListNode cur=head;
+        while(cur!=null){
+            while(cur.next!=null&&cur.val==cur.next.val){
+                cur=cur.next;
+            }
+            if(pre.next==cur){
+                pre=pre.next;
+            }
+            else{
+                pre.next=cur.next;
+            }
+            cur=cur.next;
+        }
+        return FakeHead.next;
+    }
+	
 }
 
 class ListNode {
@@ -104,4 +127,7 @@ class ListNode {
 		}
 		return toReturn;
 	}
+
+
+
 }
