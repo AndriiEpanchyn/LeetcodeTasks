@@ -8,6 +8,7 @@ public class Main {
 		//Task04_FindMinInRotatedSortedArray.run();
 		//Task05_FindPeakIndex.run();
 		//Task06_RemoveDuplicatesInList.run();
-		Task07_3Sum.run();
+//		Task07_3Sum.run();
+		Task08_BackspaceStringCompare.run();
 	}
 }
