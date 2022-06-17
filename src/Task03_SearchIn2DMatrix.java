@@ -12,14 +12,9 @@ import java.util.Arrays;
  * 
  */
 public class Task03_SearchIn2DMatrix {
-	private static int[][] testMatrix1 = new int[][] { 
-		{ 1, 3, 5, 7, 9 }, 
-		{ 10, 12, 14, 16, 20 },
-		{ 21, 23, 27, 29, 30 }, 
-		{ 32, 34, 36, 38, 40 }, 
-		{ 41, 43, 45, 47, 49 }, 
-		{ 50, 52, 54, 56, 58 },
-		{ 63, 67, 75, 81, 95 } };
+	private static int[][] testMatrix1 = new int[][] { { 1, 3, 5, 7, 9 }, { 10, 12, 14, 16, 20 },
+			{ 21, 23, 27, 29, 30 }, { 32, 34, 36, 38, 40 }, { 41, 43, 45, 47, 49 }, { 50, 52, 54, 56, 58 },
+			{ 63, 67, 75, 81, 95 } };
 	private static int target1 = 5;
 
 	public static void run() {
@@ -27,7 +22,7 @@ public class Task03_SearchIn2DMatrix {
 	}
 
 	private static boolean searchMatrix(int[][] source, int target) {
-		int found=-1;
+		int found = -1;
 		int targetRow = findRow(source, target);
 		if (targetRow != -1) {
 			found = Arrays.binarySearch(source[targetRow], target);
@@ -67,16 +62,18 @@ public class Task03_SearchIn2DMatrix {
 			return answer;
 		}
 	}
-	
-	
+
 	public boolean searchMatrix2(int[][] matrix, int target) {
-		//Answer from leetcode
-		int n = matrix[0].length, start = 0, end = matrix.length*n-1, mid;
-		while(start<=end) {
-			mid = (start + end)/2;
-			if(matrix[mid/n][mid%n]==target) return true;
-			if(target > matrix[mid/n][mid%n]) start = mid + 1;
-			else end = mid - 1;
+		// Answer from leetcode
+		int n = matrix[0].length, start = 0, end = matrix.length * n - 1, mid;
+		while (start <= end) {
+			mid = (start + end) / 2;
+			if (matrix[mid / n][mid % n] == target)
+				return true;
+			if (target > matrix[mid / n][mid % n])
+				start = mid + 1;
+			else
+				end = mid - 1;
 		}
 		return false;
 	}

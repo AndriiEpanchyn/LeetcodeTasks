@@ -29,32 +29,32 @@ public class Task04_FindMinInRotatedSortedArray {
 				{ 3, 4, 5, 6, 7, 8, 9, 10, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2 },
 				{ 3, 4, 5, 6, 7, 8, 9, 10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2 },
 				{ 3, 4, 5, 6, 7, 8, 9, 10, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2 },
-				{ 3, 4, 5, 6, 7, 8, 9, 10, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2 },
-		};
-				
+				{ 3, 4, 5, 6, 7, 8, 9, 10, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2 }, };
+
 		System.out.println("Start first test");
-		Instant startTime = Instant.now();	
+		Instant startTime = Instant.now();
 		for (int i = 0; i < test.length; i++) {
 			System.out.println("Test #" + (i + 1) + ". Array: " + Arrays.toString(test[i]));
 			System.out.println("minimum = " + findMin(test[i]));
 			System.out.println("-------------------------");
 		}
-		Instant finishTime = Instant.now();	
-		
+		Instant finishTime = Instant.now();
 
 		System.out.println("Start second test");
-		Instant startTime2 = Instant.now();	
+		Instant startTime2 = Instant.now();
 		for (int i = 0; i < test.length; i++) {
 			System.out.println("Test #" + (i + 1) + ". Array: " + Arrays.toString(test[i]));
 			System.out.println("minimum = " + leetCodefindMin(test[i]));
 			System.out.println("-------------------------");
 		}
-		Instant finishTime2 = Instant.now();	
+		Instant finishTime2 = Instant.now();
 
-		System.out.println("First test finished. Time spent: " + (finishTime.getNano()-startTime.getNano()) + "ns");
-		System.out.println("Second test finished. Time spent: " + (finishTime2.getNano()-startTime2.getNano()) + "ns");
-		System.out.println("difference between methods is: " + ((finishTime.getNano()-startTime.getNano())
-				-(finishTime2.getNano()-startTime2.getNano())) + "ns");
+		System.out.println("First test finished. Time spent: " + (finishTime.getNano() - startTime.getNano()) + "ns");
+		System.out
+				.println("Second test finished. Time spent: " + (finishTime2.getNano() - startTime2.getNano()) + "ns");
+		System.out.println("difference between methods is: "
+				+ ((finishTime.getNano() - startTime.getNano()) - (finishTime2.getNano() - startTime2.getNano()))
+				+ "ns");
 	}
 
 	public static int findMin(int[] nums) {
@@ -81,27 +81,27 @@ public class Task04_FindMinInRotatedSortedArray {
 		}
 		return min;
 	}
-	
-	 public static int leetCodefindMin(int[] num) {
-		 //Solution from leetcode
-	        if (num == null || num.length == 0) {
-	            return 0;
-	        }
-	        if (num.length == 1) {
-	            return num[0];
-	        }
-	        int start = 0, end = num.length - 1;
-	        while (start < end) {
-	            int mid = (start + end) / 2;
-	            if (mid > 0 && num[mid] < num[mid - 1]) {
-	                return num[mid];
-	            }
-	            if (num[start] <= num[mid] && num[mid] > num[end]) {
-	                start = mid + 1;
-	            } else {
-	                end = mid - 1;
-	            }
-	        }
-	        return num[start];
-	    }
+
+	public static int leetCodefindMin(int[] num) {
+		// Solution from leetcode
+		if (num == null || num.length == 0) {
+			return 0;
+		}
+		if (num.length == 1) {
+			return num[0];
+		}
+		int start = 0, end = num.length - 1;
+		while (start < end) {
+			int mid = (start + end) / 2;
+			if (mid > 0 && num[mid] < num[mid - 1]) {
+				return num[mid];
+			}
+			if (num[start] <= num[mid] && num[mid] > num[end]) {
+				start = mid + 1;
+			} else {
+				end = mid - 1;
+			}
+		}
+		return num[start];
+	}
 }

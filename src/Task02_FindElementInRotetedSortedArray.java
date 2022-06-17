@@ -24,8 +24,7 @@ public class Task02_FindElementInRotetedSortedArray {
 	public static void run() {
 		System.out.println("Start Task02_FindElementInRotetedSortedArray\nTarget element is 4\n=====================");
 		// Target =4;
-		testNums = new int[][] { 
-				{}, // Empty array
+		testNums = new int[][] { {}, // Empty array
 				{ 4 }, // Correct array of 1 element
 				{ 8 }, // Correct array of 1 incorrect element
 				{ 8, 8, 9 }, // Incorrect array of 2 equals elements
@@ -42,10 +41,8 @@ public class Task02_FindElementInRotetedSortedArray {
 				{ 5, 6, 7, 8, 9, 0, 1, 2, 3 }, // Correct Array with odd number of elements and have no target
 		};
 
-		testDescriptions = new String[] { 
-				" Empty array", " Correct array of 1 element",
-				" Correct array of 1 incorrect element",
-				" Incorrect array of 2 equals elements",
+		testDescriptions = new String[] { " Empty array", " Correct array of 1 element",
+				" Correct array of 1 incorrect element", " Incorrect array of 2 equals elements",
 				" Incorrect array of decreasing elements", " Incorrect array with incorrect gap 1",
 				" Incorrect array with incorrect gap 2",
 				" Correct Array with even number of elements and target at 0 index",
@@ -55,8 +52,7 @@ public class Task02_FindElementInRotetedSortedArray {
 				" Correct Array with odd number of elements and target at 0 index",
 				" Correct Array with odd number of elements and target at last index",
 				" Correct Array with odd number of elements and target in a middle",
-				" Correct Array with odd number of elements and have no target" 
-				};
+				" Correct Array with odd number of elements and have no target" };
 
 		initTest();
 	}
@@ -65,7 +61,7 @@ public class Task02_FindElementInRotetedSortedArray {
 		for (int i = 0; i < testNums.length; i++) {
 			System.out.println(
 					"Test ¹" + (i + 1) + testDescriptions[i] + ";\nTest array: " + Arrays.toString(testNums[i]));
-			//System.out.println("Array is valid: " + isArrayValid(testNums[i]));
+			// System.out.println("Array is valid: " + isArrayValid(testNums[i]));
 			int foundIndex = search(testNums[i], 4);
 			System.out.println("Answer is: " + foundIndex);
 			System.out.println("====================================");
@@ -75,7 +71,7 @@ public class Task02_FindElementInRotetedSortedArray {
 	public static int search(int[] nums, int target) {
 		int answer = -1;
 		if (isArrayValid(nums)) {
-			answer  = findValueIndex(nums, target);
+			answer = findValueIndex(nums, target);
 		}
 		return answer;
 	}
@@ -122,22 +118,22 @@ public class Task02_FindElementInRotetedSortedArray {
 
 		while (startIndex <= endIndex) {
 			i = (startIndex + endIndex) >>> 1;
-			
+
 			if (nums[i] == target) {
 				return i;
 			}
-			if((target<nums[0] && nums[i]<nums[0]) || (target>=nums[0]  && nums[i]>=nums[0])){
-				if(target<nums[i]) {
-					endIndex=i-1;
+			if ((target < nums[0] && nums[i] < nums[0]) || (target >= nums[0] && nums[i] >= nums[0])) {
+				if (target < nums[i]) {
+					endIndex = i - 1;
 				} else {
-					startIndex=i+1;
+					startIndex = i + 1;
 				}
-			} else if(target>=nums[0] && nums[i]<=nums[0]) {
-			   endIndex = i-1;
+			} else if (target >= nums[0] && nums[i] <= nums[0]) {
+				endIndex = i - 1;
 			} else {
-				startIndex = i+1;
+				startIndex = i + 1;
 			}
 		}
-	return answer;
+		return answer;
 	}
 }

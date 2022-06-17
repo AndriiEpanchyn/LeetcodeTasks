@@ -8,8 +8,10 @@ public class Main {
 		// Task04_FindMinInRotatedSortedArray.run();
 		// Task05_FindPeakIndex.run();
 		// Task06_RemoveDuplicatesInList.run();
-		//Task07_3Sum.run();
-		//Task08_BackspaceStringCompare.run();
-		Task09_IntervalListIntersection.run();
+		// Task07_3Sum.run();
+		// Task08_BackspaceStringCompare.run();
+		// Task09_IntervalListIntersection.run();
+		// Task10_ContainerWithMostWater.run();
+		Task11_FindAllAnnagrams.run();
 	}
 }
