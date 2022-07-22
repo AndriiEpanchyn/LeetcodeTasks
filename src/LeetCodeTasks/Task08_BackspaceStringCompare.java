@@ -1,3 +1,4 @@
+package LeetCodeTasks;
 import java.util.Stack;
 
 /**
@@ -58,9 +59,9 @@ public class Task08_BackspaceStringCompare {
 	}
 	
 	
-	 private Stack<Character> reduceBackspacesLeetCode(String S) {
+	 private static Stack<Character> reduceBackspacesLeetCode(String S) {
 		 //LeetCode solution with Stack usage
-	        Stack<Character> stack = new Stack();
+	        Stack<Character> stack = new Stack<Character>();
 	        for (char c : S.toCharArray()) {
 	            if (c != '#') {
 	                stack.push(c);

@@ -1,3 +1,4 @@
+package LeetCodeTasks;
 
 public class Main {
 
@@ -12,6 +13,15 @@ public class Main {
 		// Task08_BackspaceStringCompare.run();
 		// Task09_IntervalListIntersection.run();
 		// Task10_ContainerWithMostWater.run();
-		Task11_FindAllAnnagrams.run();
+		// Task11_FindAllAnnagrams.run();
+		// Task12_MinimumSizeSubarraySum.run();
+		// Task13_MaximumLengthOfRepeatedSubarray.run();
+		// Task14_RemoveElement.run();
+		
+		// Task019_RemoveNthNodeFromEndOfList.run();
+		// todo Task1763_LongestNiceSubstring.run();
+		
+		Task1763_LongestNiceSubstringUSOLVED.run();
+		
 	}
 }

@@ -1,3 +1,6 @@
+package LeetCodeTasks;
+
+import helpers.ListNode;
 
 public class Task06_RemoveDuplicatesInList {
 
@@ -23,8 +26,10 @@ public class Task06_RemoveDuplicatesInList {
 		node8.next = node9;
 		node9.next = node10;
 
-		System.out.println((node1).printAllSequence());
-		System.out.println(deleteDuplicates(node1).printAllSequence());
+		System.out.println(node1);
+		System.out.println(deleteDuplicates(node1));
+		System.out.println(deleteDuplicatesLeetCode(node1));
+		
 	}
 
 	public static ListNode deleteDuplicates(ListNode head) {
@@ -72,9 +77,9 @@ public class Task06_RemoveDuplicatesInList {
 		return answer;
 	}
 
-	public ListNode deleteDuplicatesLeetCode(ListNode head) {
+	public static ListNode deleteDuplicatesLeetCode(ListNode head) {
 		// Doesn't create new structure from begin, it just uses the same structure and
-		// reinstrall pointers on correct Node
+		// Reinstall pointers on correct Node
 
 		if (head == null)
 			return null;
@@ -98,35 +103,3 @@ public class Task06_RemoveDuplicatesInList {
 
 }
 
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode() {
-	}
-
-	ListNode(int val) {
-		this.val = val;
-	}
-
-	ListNode(int val, ListNode next) {
-		this.val = val;
-		this.next = next;
-	}
-
-	public String printAllSequence() {
-		ListNode current = this;
-		StringBuilder answer = new StringBuilder("{");
-		String toReturn = "null";
-		if (this != null) {
-			while (current.next != null) {
-				answer.append(current.val + ", ");
-				current = current.next;
-			}
-			answer.append(current.val + ", ");
-			toReturn = answer.substring(0, answer.lastIndexOf(", ")) + "}";
-		}
-		return toReturn;
-	}
-
-}
