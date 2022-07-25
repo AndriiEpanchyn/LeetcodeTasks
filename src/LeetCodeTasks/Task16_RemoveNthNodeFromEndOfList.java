@@ -2,7 +2,7 @@ package LeetCodeTasks;
 
 import helpers.ListNode;
 
-public class Task019_RemoveNthNodeFromEndOfList {
+public class Task16_RemoveNthNodeFromEndOfList {
 
 	public static void run() {
 		ListNode node11 = new ListNode(0);
