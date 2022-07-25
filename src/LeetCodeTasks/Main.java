@@ -17,9 +17,9 @@ public class Main {
 		// Task12_MinimumSizeSubarraySum.run();
 		// Task13_MaximumLengthOfRepeatedSubarray.run();
 		// Task14_RemoveElement.run();
-		// Task15_LongestNiceSubstring.run();
+		 Task15_LongestNiceSubstring.run();
 		// Task16_RemoveNthNodeFromEndOfList.run();
-		Task17_MinimumWindowSubstring.run();
+		//Task17_MinimumWindowSubstring.run();
 		
 		
 	}
